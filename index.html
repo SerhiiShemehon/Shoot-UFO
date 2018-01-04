@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Catch the ball</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<div class="sistem">
+		<span>
+			<span class="nameMy"></span>
+		</span>
+		<span>
+			Попаданий
+			<span id="attacks"></span>
+		</span>
+	</div>
+	<div id="time"></div>
+	<div class="level1">
+		<div id="ball"></div>
+		<div class="cannonsAll">
+			<div class="cannon">
+				<span>Q</span>
+			</div>
+			<div class="cannon">
+				<span>W</span>
+			</div>
+			<div class="cannon">
+				<span>E</span>
+			</div>
+			<div class="cannon">
+				<span>R</span>
+			</div>
+			<div class="cannon">
+				<span>T</span>
+			</div>
+			<div class="cannon">
+				<span>Y</span>
+			</div>
+		</div>
+	</div>
+	<div id="start" style="display: block;">
+		<div class="consolSecond" style="display: block;">
+			<p>Привет, боец!<br><br>Ты вступаешь в битву с ужасной расой насекомых. Они называют себя "ГОРГАМИ". <br>Если ты не справишься, то миру придет конец.<br><br>Cкажи нам свое имя?</p>
+			<br><br>
+				<input type="text" id="name" required placeholder="Ваше имя">
+				<button type="submit" class="ok">ok</button>
+		</div>
+		<div class="consolThird" style="display: none;">
+			<p style="font-weight:bold; font-size: 30px;">Перед началом прочти это!</p>
+			<br><br>
+			<p>Цель: сбить как можно больше кораблей пришельцев!</p>
+			<br>
+			<p>В твоем распоряжении самое современное оружие и 60 секунд. Но не забывай: эти твари постоянно совершенствуются (меняется скорость, траектория, затрудняют управление оружием. Так же если появятся ошибки в коде, знай - это они!) </p>
+			<p>Для использования оружия - просто жми на клавиши которые указаны возле лазерных пушек! (Q, W, E, R, T, Y)!</p>
+			<br>
+			<p>Удачи тебе, <span class="nameMy"></span></p>
+			<br>
+			<div style="text-align: center;">
+				<button class="ready">Готов</button>
+			</div>
+		</div>
+		<div class="endFirstGame" style="display: none;">
+			<br><br>
+			<p>Сбито кораблей противника: <span class="quantity" style="font-weight:bold; font-size: 30px;"></span></p>
+			<p>Сделано выстрелов: <span class="quantityShots" style="font-weight:bold; font-size: 30px;"></span></p>
+			<br><br>
+			<p>Готов попробовать еще раз?</p>
+			<br>
+			<div style="text-align: center;">
+				<button class="ready2">Готов!</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

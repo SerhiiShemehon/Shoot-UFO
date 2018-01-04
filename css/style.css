@@ -1,0 +1,476 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	box-sizing: border-box;
+}
+html,body{
+	min-height: 100%;
+	height: 100%;
+}
+body{
+	background: url(../img/background.jpg);
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+#ball{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	z-index: 1000;
+	transform: rotate(0deg);
+	background: url(../img/nlo.png);
+	transition: ballFlies 30s ease-in 0s infinite;
+    -webkit-animation: ballFlies 30s ease-in 0s infinite;
+    -moz-animation: ballFlies 30s ease-in 0s infinite;
+    -ms-animation: ballFlies 30s ease-in 0s infinite;
+    -o-animation: ballFlies 30s ease-in 0s infinite;
+}
+@keyframes ballFlies{
+	5%{
+		top: 5%;
+		left: 32%;
+		transform: rotate(0deg);
+	}
+	10%{
+		top: 30%;
+		left: 79%;
+		transform: rotate(360deg);
+	}
+	15%{
+		top: 15%;
+		left: 42%;
+	}
+	20%{
+		top: 28%;
+		left: 76%;
+	}
+	25%{
+		top: 9%;
+		left: 27%;
+	}
+	30%{
+		top: 2%;
+		left: 64%;
+	}
+	35%{
+		top: 30%;
+		left: 27%;
+		transform: rotate(360deg);
+	}
+	40%{
+		top: 8%;
+		left: 7%;
+		transform: rotate(900deg);
+	}
+	45%{
+		top: 44%;
+		left: 32%;
+	}
+	50%{
+		top: 2%;
+		left: 64%;
+	}
+	55%{
+		top: 41%;
+		left: 28%;
+		transform: rotate(900deg);
+	}
+	60%{
+		top: 13%;
+		left: 45%;
+		transform: rotate(0deg);
+	}
+	65%{
+		top: 38%;
+		left: 76%;
+	}
+	70%{
+		top: 2%;
+		left: 92%;
+	}
+	75%{
+		top: 40%;
+		left: 65%;
+	}
+	80%{
+		top: 20%;
+		left: 27%;
+		transform: rotate(0deg);
+	}
+	85%{
+		top: 20%;
+		left: 27%;
+		transform: rotate(720deg);
+	}
+	90%{
+		top: 22%;
+		left: 70%;
+	}
+	95%{
+		top: 39%;
+		left: 32%;
+	}
+}
+@keyframes ballFlies2{
+	5%{
+		top: 10%;
+		left: 82%;
+		transform: rotate(0deg);
+	}
+	10%{
+		top: 30%;
+		left: 49%;
+		transform: rotate(360deg);
+	}
+	15%{
+		top: 25%;
+		left: 2%;
+	}
+	20%{
+		top: 8%;
+		left: 76%;
+	}
+	25%{
+		top: 9%;
+		left: 46%;
+		transform: rotate(360deg);
+	}
+	30%{
+		top: 30%;
+		left: 46%;
+		transform: rotate(900deg);
+	}
+	35%{
+		top: 30%;
+		left: 7%;
+	}
+	40%{
+		top: 8%;
+		left: 47%;
+		transform: rotate(900deg);
+	}
+	45%{
+		top: 4%;
+		left: 82%;
+		transform: rotate(360deg);
+	}
+	50%{
+		top: 2%;
+		left: 14%;
+	}
+	55%{
+		top: 41%;
+		left: 92%;
+		transform: rotate(360deg);
+	}
+	60%{
+		top: 33%;
+		left: 45%;
+		transform: rotate(0deg);
+	}
+	65%{
+		top: 38%;
+		left: 76%;
+	}
+	70%{
+		top: 2%;
+		left: 12%;
+	}
+	75%{
+		top: 10%;
+		left: 65%;
+	}
+	80%{
+		top: 20%;
+		left: 37%;
+	}
+	85%{
+		top: 1%;
+		left: 78%;
+	}
+	90%{
+		top: 12%;
+		left: 50%;
+	}
+	95%{
+		top: 39%;
+		left: 32%;
+	}
+}
+.cannonsAll{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+}
+.cannonsAll>div{
+	width: 40px;
+	height: 88px;
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	margin-left: -25px;
+	background: url(../img/cannon.png);
+	background-size: cover;
+	cursor: pointer;
+	z-index: 1000;
+}
+.cannonsAll>div+div{
+	left: 25%;
+}
+.cannonsAll>div+div+div{
+	left: 40%;
+}
+.cannonsAll>div+div+div+div{
+	left: 60%;
+}
+.cannonsAll>div+div+div+div+div{
+	left: 75%;
+}
+.cannonsAll>div+div+div+div+div+div{
+	left: 90%;
+}
+@keyframes cannon{
+	0%{
+		margin-left: -25px;
+	}
+	25%{
+		margin-left: -75px;
+	}
+	75%{
+		margin-left: 25px;
+	}
+	100%{
+		margin-left: -25px;
+	}
+}
+@keyframes cannon2{
+	0%{
+		margin-left: -25px;
+	}
+	10%{
+		margin-left: -115px;
+	}
+	20%{
+		margin-left: 25px;
+	}
+	30%{
+		margin-left: -25px;
+	}
+	40%{
+		margin-left: 50px;
+	}
+	50%{
+		margin-left: 125px;
+	}
+	60%{
+		margin-left: -25px;
+	}
+	70%{
+		margin-left: 0px;
+	}
+	80%{
+		margin-left: -125px;
+	}
+	90%{
+		margin-left: 25px;
+	}
+}
+.cannon>span{
+	position: absolute;
+	bottom: 30px;
+	font-weight: bold;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 5px 10px;
+}
+.bullet{
+	position: absolute;
+	display: inline-block;
+	height: 25px;
+	width: 10px;
+	background: url(../img/bullet.png);
+	background-size: cover;
+	margin-left: 15px;
+	transition: bullet .5s linear;
+    -webkit-animation: bullet .5s linear;
+    -moz-animation: bullet .5s linear;
+    -ms-animation: bullet .5s linear;
+    -o-animation: bullet .5s linear;
+}
+@keyframes bullet{
+	100%{
+		top: -10px;
+	}
+}
+.sistem{
+	color: #fff;
+	font-size: 18px;
+	padding: 10px 25px 0;
+}
+.sistem>span{
+	float: left;
+}
+.sistem>span+span{
+	float: right;
+}
+#time{
+	position: absolute;
+	font-size: 220px;
+	margin-top: -100px;
+	top: 45%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: rgba(255,255,255,.5);
+}
+#start{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100000;
+	background: url(../img/backgroundStart.jpg);
+	background-size: cover;
+	color: #fff;
+}
+.endFirstGame, .consolSecond, .consolThird{
+	width: 470px;
+	margin: 50px auto 0;
+	padding: 20px 40px;
+	border: 1px solid #fff;
+	border-radius: 25px;
+}
+#start p{
+	font-size: 24px;
+	text-shadow:
+			-1px -1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;
+}
+#start p>span{
+	color: red;
+}
+#start p>span.nameMy{
+	color: #0600ff;
+}
+#start button{
+	display: inline-block;
+	padding: 10px 35px;
+	background: transparent;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	font-size: 25px;
+	font-weight: bold;
+	color: #fff;
+	margin-right: 30px;
+	cursor: pointer;
+}
+#start button:hover{
+	background: rgba(255,255,255,.2);
+}
+#start input{
+	background: transparent;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	font-size: 25px;
+	font-weight: bold;
+	color: #fff;
+	padding: 10px 20px;
+	width: 65%;
+}
+#start input+button{
+	width: 25%;
+}
+.consolThird{
+	width: 600px;
+}
+.dweeb h1{
+	margin-top: 100px;
+	text-align: center;
+	font-size: 200px;
+	color: #fff;
+	text-shadow:
+			-1px -1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;
+	font-weight: bold;
+}
+
+
+
+
+
+
+#scooter{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	position: absolute;
+	top: 10px;
+	left: 250px;
+	z-index: 1000;
+	transform: rotate(0deg);
+	background: url(../img/nlo.png);
+	transition: transform 1s linear;
+}
